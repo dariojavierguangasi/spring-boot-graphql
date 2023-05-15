@@ -1,0 +1,20 @@
+type Query {
+    listarProductos : [Producto],
+    listarProductoPorId(id: String) : Producto,
+    findAllCategoria : [Categoria],
+    findCategoriaById(id : Float) : Categoria
+}
+
+type Producto {
+    id: String,
+    nombre: String,
+    precio: Float,
+    cantidad: Int,
+    categoria: Categoria
+}
+
+type Categoria {
+    id: Float,
+    nombre: String
+    productos : [Producto]
+}
